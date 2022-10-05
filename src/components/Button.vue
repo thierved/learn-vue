@@ -12,7 +12,7 @@
         },
         methods: {
             onClick() {
-                console.log('working as fine!')
+                this.$emit('toggle-add-task')
             }
         }
     }
