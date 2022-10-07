@@ -1,5 +1,9 @@
 # learn-vue
 
+## Getting Started
+1. start service: `docker compose up`
+1. browse to development server at http://localhost:8080
+
 ## Project setup
 ```
 npm install
