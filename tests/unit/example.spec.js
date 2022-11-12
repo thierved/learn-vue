@@ -1,12 +1,19 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import Header from '@/components/Header.vue'
 
-describe('HelloWorld.vue', () => {
+describe('Header.vue', () => {
   it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      props: { msg }
+    const arbitraryTitle = 'arbitrary title'
+    const wrapper = shallowMount(Header, {
+      props: { 
+        title: arbitraryTitle,
+      }
     })
-    expect(wrapper.text()).toMatch(msg)
+    const expectedTitle = arbitraryTitle
+    expect(
+      wrapper.get('h1').text()
+    ).toMatch(
+      expectedTitle
+    )
   })
 })
